@@ -8,8 +8,8 @@ export function openDB() {
 
   // Crie a tabela cards
   const sql1 = `CREATE TABLE IF NOT EXISTS cards (
+    card_id INTEGER,
     period DATETIME,
-    card_id TEXT,
     card_name TEXT,
     list_id TEXT,
     cycle_time_secs INTEGER

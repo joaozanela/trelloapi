@@ -70,8 +70,8 @@ try {
           //     `Coluna: ${list_name}, Média de Tempo: ${cycle_time_secs} segundos.`
           //   );
           // Inserindo Dados no Sqlite3
-          const sql1 = `INSERT INTO cards (period, card_id, card_name, list_id, cycle_time_secs) VALUES (?, ?, ?, ?, ?);`;
-          db.run(sql1, [period, card_id, card_name, list_id, cycle_time_secs]);
+          const sql1 = `INSERT INTO cards (card_id, period, card_name, list_id, cycle_time_secs) VALUES (?, ?, ?, ?, ?);`;
+          db.run(sql1, [card_id, period, card_name, list_id, cycle_time_secs]);
 
           const sql2 = `INSERT INTO cards_avg (period, card_id, list_id, cycle_time_secs) VALUES (?, ?, ?, ?);`;
           db.run(sql2, [period, card_id, list_id, cycle_time_secs]);
